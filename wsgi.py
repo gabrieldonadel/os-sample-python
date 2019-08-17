@@ -1,14 +1,12 @@
 from flask import Flask
+import ibmiotf.device
 application = Flask(__name__)
 
 @application.route("/")
 def hello():
     return "OpenShift Hello World!"
 
-    
-@application.route('/')
-def main():
-    return "Hello word"
+ 
 
 @application.route('/iot', methods=['GET', 'POST'])
 def index():
